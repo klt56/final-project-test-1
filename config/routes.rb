@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :posts
+get 'latest', to: 'posts#latest'
+  resources :articles
   devise_for :users,
              controllers: {
                sessions: 'users/sessions',
